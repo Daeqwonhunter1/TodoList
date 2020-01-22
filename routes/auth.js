@@ -59,7 +59,7 @@ router.post('/register', async (req, res, next) => {
     })
     const respData = buildAuthResponse(user)
     user.save()
-    res.json(user)
+    res.json(respData)
   } catch (err) {
     next(err)
   }
@@ -76,27 +76,27 @@ router.post('/login', async (req, res) => {
   const user = await User.findOne({
     email: req.body.email
   })
-
-  if (!user) return res.status(400).send("Email is incorrect")
+ 
+  if (!user.email) return res.status(400).send("Email is incorrect")
 
   if (await bcrypt.compare(req.body.password, user.password)) {
     const respData = buildAuthResponse(user);
-    
+    res.json(respData)
   } else if (!validPass) {
     return res.status(400).send('Invalid Password')
   }
 
-  const token = jwt.sign({
-    _id: user._id,
-    username: user.username
-  }, process.env.TOKEN_SECRET);
-  res.header('authToken', token).send({user,token})
+  // const token = jwt.sign({
+  //   _id: user._id,
+  //   username: user.username
+  // }, process.env.TOKEN_SECRET);
+  // res.header('authToken', token).send({user,token})
 
 })
 
 ///Verify
-router.get('/verify', verify, (req, res) => {
-  const user = req.user;
+router.get('/verify',verify, (req, res) => {
+  const user = res.locals.user;
   res.json(user);
   // const token = jwt.sign({
   //   _id: user._id
