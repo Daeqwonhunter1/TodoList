@@ -109,3 +109,4 @@ router.get('/verify',verify, (req, res) => {
 
 
 module.exports = router;
+module.exports.buildAuthResponse = buildAuthResponse;

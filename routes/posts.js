@@ -2,9 +2,11 @@ const express = require('express')
 const router = express.Router()
 const Post = require('../models/Post')
 const {verify} = require('../routes/verifyToken')
-
-
+const User = require('../models/User')
+const {buildAuthResponse} = require('./auth')
 ///ALL Posts
+
+
 router.get('/posts', verify, async (req, res,next) => {
   try {
     const posts = await Post.find()
@@ -21,8 +23,7 @@ router.post('/posts',verify, async (req, res,next) => {
   const post = new Post({
     title: req.body.title,
     description: req.body.description,
-    expiration: req.body.expiration,
-  
+    userId: res.locals.user.id
   })
   try {
     const savedPost = await post.save()
@@ -54,7 +55,7 @@ router.delete('/posts/:postId',verify, async (req, res,next) => {
 })
 
 //Update Post
-router.post('/posts/:postId',verify, async (req, res,next) => {
+router.put('/posts/:postId',verify, async (req, res,next) => {
   Post.findById(req.params.postId)
     .then(post => {
       post.title = req.body.title

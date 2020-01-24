@@ -9,7 +9,10 @@ const PostSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  expiration: {
+  // expiration: {
+  //   type:String
+  // },
+  userId: {
     type:String
   },
   created: {
