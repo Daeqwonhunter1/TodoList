@@ -1,0 +1,237 @@
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  content: '';
+  position: relative;
+  left:0px;
+  width: 100vw;
+  height:100vh ;
+  background-image: url("http://hdwpro.com/wp-content/uploads/2018/10/Nice-Galaxy-Wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#user-info{
+  color:blue;
+  font-size: 20px;
+}
+#user-info button {
+  position: relative;
+  left:38px;
+  top:-10px
+}
+
+#userheader{
+  position: relative;
+  left:-650px
+}
+
+.task-button {
+  background: rgba(34,81,140,0.9);
+ color:black;
+ font-size:20px;
+  border: 1px solid black;
+ padding: 3px;
+}
+/* .register-div {
+  margin: 0;
+  padding: 0;
+}
+
+.register-div:before{
+  content: '';
+  position: fixed;
+  left:0px;
+  width: 200vh;
+  height:100vh;
+  background-image: url("http://hdwpro.com/wp-content/uploads/2018/10/Nice-Galaxy-Wallpaper.jpg");
+  background-repeat: no-repeat;
+} */
+.text-muted {
+  position: relative;
+  left:60%;
+}
+.create-input-fields {
+  width:200%;
+  position: relative;
+  left:20px;
+  text-align: center;
+}
+
+.update-input-fields {
+  width:20vw;
+  position: relative;
+  left:0px;
+  text-align: center;
+}
+.PostTitle {
+  position: relative;
+  left:35%
+}
+.btn {
+  position: relative;
+  top:100px;
+  left:10px
+}
+
+.sub {
+  position: relative;
+  top:12px;
+  padding: 10px;
+
+}
+#PostDiv {
+  position: relative;
+  width: 120vh;
+  left: 240px;
+  padding:10px;
+
+}
+
+#posts {
+  border-bottom: 1px solid black;
+  border-top:1px solid white;
+  
+}
+
+.users {
+  background-color: blue;
+}
+
+.login-div-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  padding: 80px 40px;
+  background: rgba(0, 0, 0, 0.6)
+}
+.register-div-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  padding: 80px 40px;
+  background: rgba(0, 0, 0, 0.6)
+}
+
+
+.login-div-form p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color:white;
+}
+
+.login-div-form input{
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.login-div-form input[type=text],
+.login-div-form input[type=password] {
+  border:none;
+  border-bottom:1px solid #fff;
+  outline: none;
+  background:transparent;
+  height:35px;
+  color:#fff;
+  font-size: 15px;
+}
+
+.login-div-form button {
+  text-align: center;
+  position: relative;
+  left:41%;
+ background: none;
+ color:rgb(34,81,140);
+ font-size:20px;
+ border-radius:5px;
+ padding: 3px;
+  
+}
+.login-div-form button:hover {
+  background-color: rgba(100,100,100,0.3);
+  
+}
+
+.login-div-form a {
+  text-decoration: none;
+  color:rgb(34,81,140)
+}
+
+.login-div-form h1 {
+  color:rgb(34,81,140)
+}
+.register-div-form p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color:white;
+}
+
+.register-div-form input{
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.register-div-form input[type=text],
+.register-div-form input[type=text],
+.register-div-form input[type=password] {
+  border:none;
+  border-bottom:1px solid #fff;
+  outline: none;
+  background:transparent;
+  height:35px;
+  color:#fff;
+  font-size: 15px;
+}
+
+.register-div-form button {
+  text-align: center;
+  position: relative;
+  left:41%;
+ background: none;
+ color:rgb(34,81,140);
+ font-size:20px;
+ border-radius:5px;
+ padding: 3px;
+}
+.register-div-form button:hover {
+  background-color: rgba(100,100,100,0.3);
+  
+}
+.register-div-form a {
+  text-decoration: none;
+   color:rgb(34,81,140)
+}
+
+.register-div-form h1 {
+  color:rgb(34,81,140)
+}
+
+/* .login-div-form {
+  background-color: green;
+} */
